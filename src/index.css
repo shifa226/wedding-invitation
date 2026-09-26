@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-arabic: 'Amiri', serif;
+    --font-cinzel: 'Cinzel', serif;
+    --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+    --font-script: 'Pinyon Script', cursive;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-sans-clean {
+  font-family: var(--font-sans);
+}
+
+/* 3D Envelope & Card Perspective */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.perspective-1600 {
+  perspective: 1600px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Luxury Gold Text Gradient */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fce8a6 0%, #dfb86c 35%, #b58636 70%, #f6df9a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-text-subtle {
+  background: linear-gradient(135deg, #f5e4bd 0%, #cca052 50%, #e8cc87 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-foil-border {
+  border-image: linear-gradient(to bottom right, #f6df9a, #dfb86c, #9d7328, #f4dd96) 1;
+}
+
+/* Subtle Shimmer Animation */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, rgba(223, 184, 108, 0) 0%, rgba(252, 232, 166, 0.4) 50%, rgba(223, 184, 108, 0) 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 4s infinite linear;
+}
+
+/* Emerald Paper Texture & Subtle Grain */
+.bg-emerald-velvet {
+  background: radial-gradient(circle at 50% 30%, #0d382b 0%, #08261d 45%, #04140f 85%, #020a07 100%);
+}
+
+.paper-card-texture {
+  background-color: #faf7f0;
+  background-image: 
+    radial-gradient(#dfb86c12 1px, transparent 1px),
+    radial-gradient(#00000005 1px, transparent 1px);
+  background-size: 24px 24px, 12px 12px;
+  background-position: 0 0, 12px 12px;
+}
+
+.envelope-texture {
+  background: linear-gradient(145deg, #092f23 0%, #062018 60%, #041812 100%);
+}
+
+/* Subtle Islamic Star Geometric Pattern */
+.bg-islamic-pattern {
+  background-image: radial-gradient(rgba(223, 184, 108, 0.08) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbar for Luxury Aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030d0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6e5422;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dfb86c;
+}
