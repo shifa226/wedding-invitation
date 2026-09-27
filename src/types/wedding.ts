@@ -51,7 +51,7 @@ export interface GalleryItem {
 
 export interface WeddingData {
   couple: {
-    monogram: string; // "S & M"
+    monogram: string; // "I & M"
     arabicNames: string; // "سيد عرفان & مهك"
     groom: {
       name: string;

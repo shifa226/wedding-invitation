@@ -8,7 +8,7 @@ import storyMoment from '../assets/images/couple_story_moment_1790340846105.jpg'
 
 export const weddingData: WeddingData = {
   couple: {
-    monogram: 'S & M',
+    monogram: 'I & M',
     arabicNames: 'سيد عرفان & مهك',
     groom: {
       name: 'Syed Irfan',
@@ -22,7 +22,7 @@ export const weddingData: WeddingData = {
   bismillahArabic: 'بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
   bismillahEnglish: 'In the Name of Allah, The Most Beneficent & Most Merciful',
   invitationNote: 'Together with their families, cordially invite you to celebrate the marriage of',
-  
+
   // Exact Family Details as specified:
   familyGroom: {
     title: 'THE GROOM',

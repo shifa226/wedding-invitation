@@ -364,7 +364,7 @@ export const RoyalWaxSeal: React.FC<RoyalWaxSealProps> = ({
             <circle cx="0" cy="0" r="1.6" fill="#fff8e7" />
           </g>
 
-          {/* 3. The Royal "S & M" Monogram in Bold Chiseled Relief */}
+          {/* 3. The Royal "I & M" Monogram in Bold Chiseled Relief */}
           <g transform="translate(50, 52.8)">
             {/* Letter S with bright left bevel and dark right shadow */}
             <text
