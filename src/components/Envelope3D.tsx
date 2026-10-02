@@ -95,14 +95,14 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
 
   return (
     <div className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 select-none">
-      {/* Cinematic Dark Arabian Ambience with Golden Dust & Subtle Stars */}
+      {/* Warm ivory Arabian ambience with golden dust and subtle stars */}
       <div
         className={`absolute inset-0 transition-colors duration-1000 ${
-          phase >= 1 ? 'bg-[#10070b]' : 'bg-[#250d16]'
+          phase >= 1 ? 'bg-[#eee5d3]' : 'bg-[#f7f1e5]'
         }`}
       >
         {/* Soft radial glow centered on envelope */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(197,160,89,0.16)_0%,rgba(62,20,34,0.85)_50%,#10070b_100%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(255,252,242,0.72)_0%,rgba(239,229,208,0.45)_52%,rgba(220,204,172,0.2)_100%)] pointer-events-none" />
 
         {/* Delicate Islamic geometric lattice overlay */}
         <div
@@ -150,10 +150,10 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.2 }}
       >
-        <p className="font-arabic text-2xl sm:text-3xl text-[#f3dec0] tracking-wide leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+        <p className="font-arabic text-2xl sm:text-3xl text-[#17352a] tracking-wide leading-relaxed drop-shadow-[0_2px_8px_rgba(84,62,28,0.18)]">
           {weddingData.bismillahArabic}
         </p>
-        <p className="font-cinzel text-[11px] sm:text-xs text-[#cca052]/80 uppercase tracking-[0.25em] mt-1">
+        <p className="font-cinzel text-[11px] sm:text-xs text-[#765521] uppercase tracking-[0.25em] mt-1">
           {weddingData.bismillahEnglish}
         </p>
       </motion.div>
@@ -479,7 +479,7 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        <p className="font-cormorant italic text-base sm:text-lg text-[#e4d0a0] tracking-wide">
+        <p className="font-cormorant italic text-base sm:text-lg text-[#17352a] tracking-wide">
           Together with their families
         </p>
 
@@ -504,7 +504,7 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
         {/* Discreet skip affordance if visitor wants instant entry */}
         <button
           onClick={handleInstantOpen}
-          className="mt-3 text-[11px] font-cinzel tracking-widest text-[#cca052]/50 hover:text-[#cca052] transition-colors block mx-auto underline uppercase"
+          className="mt-3 text-[11px] font-cinzel tracking-widest text-[#765521]/80 hover:text-[#17352a] transition-colors block mx-auto underline uppercase"
         >
           Skip animation &amp; view card
         </button>
