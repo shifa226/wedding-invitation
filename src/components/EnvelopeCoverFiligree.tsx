@@ -297,17 +297,34 @@ export const OrnateCornerSpandrel: React.FC<{
   );
 };
 
-export const GirihLatticePattern: React.FC<{ className?: string }> = ({
+export const EnvelopeArabesquePattern: React.FC<{ className?: string }> = ({
   className = '',
 }) => {
   return (
-    <div
-      className={`absolute inset-0 pointer-events-none select-none opacity-[0.09] ${className}`}
-      style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23dfba73' stroke-width='0.95'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z'/%3E%3Cpath d='M0 0 L40 40 L0 80'/%3E%3Cpath d='M80 0 L40 40 L80 80'/%3E%3Ccircle cx='40' cy='40' r='14' stroke-dasharray='1 2'/%3E%3Ccircle cx='0' cy='0' r='14'/%3E%3Ccircle cx='80' cy='0' r='14'/%3E%3Ccircle cx='0' cy='80' r='14'/%3E%3Ccircle cx='80' cy='80' r='14'/%3E%3Ccircle cx='40' cy='40' r='4' fill='%23cca052'/%3E%3C/g%3E%3C/svg%3E")`,
-        backgroundSize: '80px 80px',
-      }}
-    />
+    <svg
+      viewBox="0 0 470 320"
+      preserveAspectRatio="none"
+      className={`absolute inset-0 w-full h-full pointer-events-none select-none opacity-[0.16] ${className}`}
+      aria-hidden="true"
+    >
+      <defs>
+        <pattern id="envelopeArabesquePattern" width="96" height="96" patternUnits="userSpaceOnUse">
+          <g fill="none" stroke="#dfba73" strokeWidth="0.8">
+            <circle cx="48" cy="48" r="27" />
+            {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => (
+              <path
+                key={angle}
+                d="M48 19 C58 32 58 40 48 48 C38 40 38 32 48 19 Z"
+                transform={`rotate(${angle} 48 48)`}
+              />
+            ))}
+            <circle cx="48" cy="48" r="4" fill="#dfba73" />
+            <path d="M48 0 C48 13 40 19 30 22 M96 48 C83 48 77 40 74 30 M48 96 C48 83 56 77 66 74 M0 48 C13 48 19 56 22 66" />
+          </g>
+        </pattern>
+      </defs>
+      <rect width="470" height="320" fill="url(#envelopeArabesquePattern)" />
+    </svg>
   );
 };
 

@@ -81,7 +81,7 @@ def common_defs():
 
       <!-- Mughal / Andalusian Cusped Arch for Couple Portrait -->
       <clipPath id="royalArchClip">
-        <path d="M 230 380 
+        <path d="M 230 380
                  C 230 290, 310 240, 390 220
                  C 450 200, 510 180, 540 160
                  C 570 180, 630 200, 690 220
@@ -95,7 +95,7 @@ def common_defs():
 
       <!-- Venue Cusped Arch -->
       <clipPath id="venueArchClip">
-        <path d="M 240 370 
+        <path d="M 240 370
                  C 240 290, 315 245, 390 225
                  C 450 205, 510 185, 540 165
                  C 570 185, 630 205, 690 225
@@ -163,7 +163,7 @@ s1 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
   <!-- Top Sacred Bismillah in Amiri Calligraphy -->
   <text x="540" y="210" text-anchor="middle" fill="url(#gold24k)" font-size="52" font-family="Amiri, serif" font-weight="bold">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</text>
   <text x="540" y="265" text-anchor="middle" fill="#cca052" font-size="17" font-family="Cinzel, serif" letter-spacing="5">IN THE NAME OF ALLAH, THE MOST BENEFICENT, THE MOST MERCIFUL</text>
-  
+
   <!-- Royal Divider -->
   <line x1="240" y1="310" x2="840" y2="310" stroke="url(#gold24k)" stroke-width="1.8" />
   <polygon points="540,302 548,310 540,318 532,310" fill="url(#gold24k)" />
@@ -177,11 +177,11 @@ s1 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
     <circle cx="0" cy="0" r="162" fill="url(#goldPlate)" stroke="#cca052" stroke-width="4" />
     <circle cx="0" cy="0" r="144" fill="#04160f" stroke="url(#gold24k)" stroke-width="3" />
     <circle cx="0" cy="0" r="132" fill="none" stroke="#cca052" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.8" />
-    
+
     <!-- Laurel Wreath Leaves Around Monogram -->
     <path d="M -90 -10 C -110 -60, -60 -110, 0 -118 C 60 -110, 110 -60, 90 -10" fill="none" stroke="url(#gold24k)" stroke-width="2" opacity="0.6" stroke-dasharray="4 4" />
     <path d="M -90 10 C -110 60, -60 110, 0 118 C 60 110, 110 60, 90 10" fill="none" stroke="url(#gold24k)" stroke-width="2" opacity="0.6" stroke-dasharray="4 4" />
-    
+
     <!-- Monogram Characters -->
     <text x="0" y="24" text-anchor="middle" fill="url(#gold24k)" font-size="82" font-family="Cinzel Decorative, Cinzel, serif" font-weight="bold" letter-spacing="8">S &amp; M</text>
     <text x="0" y="74" text-anchor="middle" fill="#fce8a6" font-size="13" font-family="Cinzel, serif" letter-spacing="6">ROYAL UNION</text>
@@ -219,7 +219,7 @@ s2 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
   <polygon points="540,115 544,123 540,131 536,123" fill="url(#gold24k)" />
 
   <!-- Arched Couple Portrait Photo Frame with Multi-tier Gold Borders -->
-  <path d="M 224 380 
+  <path d="M 224 380
            C 224 286, 306 234, 388 214
            C 448 194, 508 174, 540 152
            C 572 174, 632 194, 692 214
@@ -230,7 +230,7 @@ s2 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
            C 236 1088, 224 1078, 224 1066
            Z" fill="none" stroke="url(#gold24k)" stroke-width="6" />
 
-  <path d="M 238 382 
+  <path d="M 238 382
            C 238 296, 314 248, 392 228
            C 450 208, 510 188, 540 168
            C 570 188, 630 208, 688 228
@@ -259,7 +259,7 @@ s2 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
     <!-- English Translation in Playfair -->
     <text x="400" y="155" text-anchor="middle" fill="#fce8a6" font-size="20" font-family="Playfair Display, serif" font-style="italic">"And among His signs is that He created for you mates from among yourselves,</text>
     <text x="400" y="185" text-anchor="middle" fill="#fce8a6" font-size="20" font-family="Playfair Display, serif" font-style="italic">that you may dwell in tranquility, and He placed between you love and mercy."</text>
-    
+
     <text x="400" y="222" text-anchor="middle" fill="#cca052" font-size="14" font-family="Cinzel, serif" letter-spacing="3">SURAH AR-RUM [30:21]</text>
   </g>
 </svg>'''
@@ -276,7 +276,7 @@ s3 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
   <text x="540" y="200" text-anchor="middle" fill="#cca052" font-size="24" font-family="Cinzel, serif" letter-spacing="9">THE SACRED NIKAH CEREMONY</text>
 
   <!-- Venue Photography Arched Frame -->
-  <path d="M 234 370 
+  <path d="M 234 370
            C 234 286, 310 240, 386 220
            C 446 200, 506 180, 540 158
            C 574 180, 634 200, 694 220
@@ -284,7 +284,7 @@ s3 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
            L 846 926
            L 234 926
            Z" fill="none" stroke="url(#gold24k)" stroke-width="5" />
-  
+
   <image href="data:image/jpeg;base64,{nikah_b64}" x="240" y="150" width="600" height="780" preserveAspectRatio="xMidYMid slice" clip-path="url(#venueArchClip)" />
 
   <!-- Venue Badge Tag -->
@@ -335,7 +335,7 @@ s4 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
   <text x="540" y="200" text-anchor="middle" fill="#cca052" font-size="24" font-family="Cinzel, serif" letter-spacing="9">THE GRAND VALIMA RECEPTION</text>
 
   <!-- Venue Photography Arched Frame -->
-  <path d="M 234 370 
+  <path d="M 234 370
            C 234 286, 310 240, 386 220
            C 446 200, 506 180, 540 158
            C 574 180, 634 200, 694 220
@@ -343,7 +343,7 @@ s4 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
            L 846 926
            L 234 926
            Z" fill="none" stroke="url(#gold24k)" stroke-width="5" />
-  
+
   <image href="data:image/jpeg;base64,{valima_b64}" x="240" y="150" width="600" height="780" preserveAspectRatio="xMidYMid slice" clip-path="url(#venueArchClip)" />
 
   <!-- Venue Badge Tag -->
@@ -403,13 +403,13 @@ s5 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
 
     <text x="430" y="65" text-anchor="middle" fill="#cca052" font-size="18" font-family="Cinzel, serif" letter-spacing="5">THE GROOM &amp; FAMILY</text>
     <text x="430" y="125" text-anchor="middle" fill="url(#gold24k)" font-size="44" font-family="Cinzel, serif" font-weight="bold">Syed Irfan</text>
-    
+
     <text x="430" y="180" text-anchor="middle" fill="#fce8a6" font-size="25" font-family="Playfair Display, serif" font-weight="bold">S/o Syed Akbar (Late)</text>
     <text x="430" y="225" text-anchor="middle" fill="#dfba73" font-size="20" font-family="Playfair Display, serif">S.A. Fashions, R.T. Road, Sira</text>
 
     <line x1="160" y1="270" x2="700" y2="270" stroke="url(#gold24k)" stroke-width="1" opacity="0.6" />
 
-    <text x="430" y="325" text-anchor="middle" fill="#dfba73" font-size="22" font-family="Playfair Display, serif">Paternal Grand S/o Late Syed Abdur-Rehman Saheb</text>
+    <text x="430" y="325" text-anchor="middle" fill="#dfba73" font-size="22" font-family="Playfair Display, serif">Paternal Grand S/o Syed Abdur-Rehman (Late)</text>
     <text x="430" y="365" text-anchor="middle" fill="#cca052" font-size="19" font-family="Cinzel, serif" letter-spacing="2">UPPAR BAZAR, SIRA</text>
 
     <line x1="250" y1="405" x2="610" y2="405" stroke="#cca052" stroke-width="0.8" opacity="0.4" />
@@ -425,18 +425,18 @@ s5 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
 
     <text x="430" y="65" text-anchor="middle" fill="#cca052" font-size="18" font-family="Cinzel, serif" letter-spacing="5">THE BRIDE &amp; FAMILY</text>
     <text x="430" y="125" text-anchor="middle" fill="url(#gold24k)" font-size="44" font-family="Cinzel, serif" font-weight="bold">Mehek S.</text>
-    
-    <text x="430" y="180" text-anchor="middle" fill="#fce8a6" font-size="25" font-family="Playfair Display, serif" font-weight="bold">D/o Syed Subhan urf Syed Ansar</text>
+
+    <text x="430" y="180" text-anchor="middle" fill="#fce8a6" font-size="25" font-family="Playfair Display, serif" font-weight="bold">D/o Syed Suban urf Syed Ansar</text>
     <text x="430" y="225" text-anchor="middle" fill="#dfba73" font-size="20" font-family="Playfair Display, serif">Fruit Merchant, 1st Block, Madhugiri</text>
 
     <line x1="160" y1="270" x2="700" y2="270" stroke="url(#gold24k)" stroke-width="1" opacity="0.6" />
 
-    <text x="430" y="325" text-anchor="middle" fill="#dfba73" font-size="22" font-family="Playfair Display, serif">Paternal Grand D/o Ismail Sab (Late)</text>
+    <text x="430" y="325" text-anchor="middle" fill="#dfba73" font-size="22" font-family="Playfair Display, serif">Paternal Grand D/o Syed Ismail (Late)</text>
     <text x="430" y="365" text-anchor="middle" fill="#cca052" font-size="19" font-family="Cinzel, serif" letter-spacing="2">MADHUGIRI</text>
 
     <line x1="250" y1="405" x2="610" y2="405" stroke="#cca052" stroke-width="0.8" opacity="0.4" />
 
-    <text x="430" y="455" text-anchor="middle" fill="#dfba73" font-size="22" font-family="Playfair Display, serif">Maternal Grand D/o Syed Lateef Sab (Late)</text>
+    <text x="430" y="455" text-anchor="middle" fill="#dfba73" font-size="22" font-family="Playfair Display, serif">Maternal Grand D/o Syed Lateef (Late)</text>
     <text x="430" y="495" text-anchor="middle" fill="#cca052" font-size="19" font-family="Cinzel, serif" letter-spacing="2">MADHUGIRI</text>
   </g>
 
@@ -475,7 +475,7 @@ s6 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
 
     <!-- Sacred JazakAllahu Khairan -->
     <text x="420" y="95" text-anchor="middle" fill="url(#gold24k)" font-size="64" font-family="Amiri, serif" font-weight="bold">جَزَاكُمُ اللَّهُ خَيْرًا</text>
-    
+
     <text x="420" y="175" text-anchor="middle" fill="#fce8a6" font-size="26" font-family="Playfair Display, serif" font-style="italic">"Thank you for being an indispensable part of our sacred celebration</text>
     <text x="420" y="220" text-anchor="middle" fill="#fce8a6" font-size="26" font-family="Playfair Display, serif" font-style="italic">and gracing our union with your heartfelt prayers."</text>
 
@@ -485,7 +485,7 @@ s6 = f'''<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://w
     <text x="420" y="340" text-anchor="middle" fill="url(#goldLight)" font-size="34" font-family="Amiri, serif" font-weight="bold">بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</text>
     <text x="420" y="395" text-anchor="middle" fill="#cca052" font-size="18" font-family="Cinzel, serif" letter-spacing="4">BARAKALLAHU LAKUMA WA BARAKA ALAIKUMA</text>
     <text x="420" y="435" text-anchor="middle" fill="#cca052" font-size="16" font-family="Cinzel, serif" letter-spacing="3">WA JAMA'A BAINAKUMA FI KHAIR</text>
-    
+
     <text x="420" y="480" text-anchor="middle" fill="#dfba73" font-size="16" font-family="Playfair Display, serif" font-style="italic">May Allah bless your union and shower His mercy upon you both.</text>
   </g>
 
@@ -514,7 +514,7 @@ for i, (png, dur) in enumerate(zip(png_files, durations)):
     clip_path = f'/tmp/video_scenes/clip_{i}.mp4'
     fps = 25
     frames = int(dur * fps)
-    
+
     # Alternate between gentle zoom-in and gentle zoom-out for cinematic elegance
     if i % 2 == 0:
         # Subtle zoom-in: 1.00 -> 1.045
@@ -522,7 +522,7 @@ for i, (png, dur) in enumerate(zip(png_files, durations)):
     else:
         # Subtle pan & gentle zoom
         vf = f"zoompan=z='min(zoom+0.00025,1.04)':d={frames}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)+(in*0.04)':s=1080x1920:fps={fps}"
-        
+
     cmd_clip = [
         'ffmpeg', '-y',
         '-loop', '1', '-i', png,

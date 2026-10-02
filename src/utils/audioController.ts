@@ -6,7 +6,7 @@
  * 2. Secondary Engine: Web Audio API AudioBuffer playback (decodes raw MP3 bytes directly)
  *    Bypasses mobile browser HTMLMediaElement sandbox restrictions
  * 3. Tertiary Engine: Procedural Web Audio Oud & Ney ambient synthesizer
- * 
+ *
  * Includes global user-gesture auto-unlock for seamless mobile & desktop experience.
  */
 
@@ -25,7 +25,7 @@ export const WEDDING_TRACKS: WeddingTrack[] = [
     title: 'Music',
     subtitle: '',
     artist: '',
-    durationSec: 217,
+    durationSec: 120,
     url: '/music/wedding-song.mp3',
   },
 ];
@@ -88,10 +88,11 @@ class ArabicAudioController {
 
   public getState(): AudioPlayerState {
     const track = this.getCurrentTrack();
-    const duration =
+    const actualDuration =
       this.audioElement && !isNaN(this.audioElement.duration) && this.audioElement.duration > 0
         ? this.audioElement.duration
         : track.durationSec;
+    const duration = Math.min(actualDuration, track.durationSec);
 
     return {
       isPlaying: this.isPlaying,
@@ -108,7 +109,7 @@ class ArabicAudioController {
       const track = this.getCurrentTrack();
       const audio = new Audio();
       audio.src = track.url;
-      audio.loop = true;
+      audio.loop = false;
       audio.volume = this.volume;
       audio.muted = false;
       audio.preload = 'auto';
@@ -128,7 +129,11 @@ class ArabicAudioController {
       });
 
       audio.addEventListener('timeupdate', () => {
-        this.currentTime = audio.currentTime;
+        this.currentTime = Math.min(audio.currentTime, this.getCurrentTrack().durationSec);
+        if (this.currentTime >= this.getCurrentTrack().durationSec && this.isPlaying) {
+          this.pause();
+          return;
+        }
         this.notify();
       });
 
@@ -141,8 +146,10 @@ class ArabicAudioController {
       });
 
       audio.addEventListener('ended', () => {
-        this.currentTime = 0;
-        audio.play().catch(() => {});
+        this.currentTime = Math.min(audio.currentTime, this.getCurrentTrack().durationSec);
+        this.isPlaying = false;
+        this.stopTimeTracker();
+        this.notify();
       });
 
       audio.addEventListener('error', (e) => {
@@ -158,10 +165,22 @@ class ArabicAudioController {
   private startTimeTracker() {
     this.stopTimeTracker();
     this.timeUpdateInterval = window.setInterval(() => {
-      if (this.audioElement && this.isPlaying) {
+      if (!this.isPlaying) return;
+
+      if (this.audioElement && !this.isBufferPlaying && !this.isUsingSynth) {
         this.currentTime = this.audioElement.currentTime;
-        this.notify();
+      } else {
+        this.currentTime += 0.5;
       }
+
+      const maxDuration = this.getCurrentTrack().durationSec;
+      if (this.currentTime >= maxDuration) {
+        this.currentTime = maxDuration;
+        this.pause();
+        return;
+      }
+
+      this.notify();
     }, 500);
   }
 
@@ -271,13 +290,14 @@ class ArabicAudioController {
 
       const source = ctx.createBufferSource();
       source.buffer = buffer;
-      source.loop = true;
+      source.loop = false;
       source.connect(this.gainNode);
       source.start(0);
 
       this.bufferSource = source;
       this.isBufferPlaying = true;
       this.isPlaying = true;
+      this.startTimeTracker();
       this.notify();
       return true;
     } catch (e) {
@@ -299,6 +319,7 @@ class ArabicAudioController {
 
   public async play(): Promise<boolean> {
     this.userHasInteracted = true;
+    if (this.currentTime >= this.getCurrentTrack().durationSec) return false;
 
     // 1. Ensure audio context is awake
     const ctx = this.getAudioContext();
@@ -368,6 +389,10 @@ class ArabicAudioController {
       try {
         this.audioElement.currentTime = clamped;
       } catch {}
+    }
+    if (clamped >= maxDur && this.isPlaying) {
+      this.pause();
+      return;
     }
     this.notify();
   }
@@ -465,6 +490,7 @@ class ArabicAudioController {
 
     this.isUsingSynth = true;
     this.isPlaying = true;
+    this.startTimeTracker();
     this.notify();
 
     let motifIdx = 0;

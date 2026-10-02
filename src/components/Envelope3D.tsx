@@ -5,10 +5,8 @@ import React, { useState } from 'react';
 import { weddingData } from '../data/weddingData';
 import { arabicAudio } from '../utils/audioController';
 import {
-  EnvelopeCenterMedallion,
+  EnvelopeArabesquePattern,
   EnvelopePocketSeamFiligree,
-  GirihLatticePattern,
-  OrnateCornerSpandrel,
 } from './EnvelopeCoverFiligree';
 import { ArabesqueCorner, EnvelopeFlapFiligree, IntricateGoldBorder, IslamicStarKhatim } from './IslamicOrnaments';
 import { RoyalWaxSeal } from './RoyalWaxSeal';
@@ -106,9 +104,9 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
 
         {/* Delicate Islamic geometric lattice overlay */}
         <div
-          className="absolute inset-0 opacity-[0.08] bg-repeat"
+          className="absolute inset-0 opacity-[0.16] bg-repeat"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20 Z' fill='none' stroke='%23cca052' stroke-width='1'/%3E%3Ccircle cx='20' cy='20' r='5' fill='none' stroke='%23cca052' stroke-width='0.7'/%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20 Z' fill='none' stroke='%23b58636' stroke-width='1.2'/%3E%3Ccircle cx='20' cy='20' r='5' fill='none' stroke='%23b58636' stroke-width='0.9'/%3E%3C/svg%3E")`,
             backgroundSize: '40px 40px',
           }}
         />
@@ -118,19 +116,19 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
           {[...Array(18)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute rounded-full bg-[#cca052]"
+              className="absolute rounded-full bg-[#b58636]"
               style={{
                 width: Math.random() * 3 + 1.5 + 'px',
                 height: Math.random() * 3 + 1.5 + 'px',
                 left: `${(i * 5.5 + 4)}%`,
                 top: `${(i * 12 + 6) % 94}%`,
-                opacity: 0.35,
+                opacity: 0.5,
                 filter: 'blur(0.5px)',
               }}
               animate={{
                 y: [-15, -45, -15],
                 x: [0, (i % 2 === 0 ? 12 : -12), 0],
-                opacity: [0.15, 0.6, 0.15],
+                opacity: [0.3, 0.8, 0.3],
               }}
               transition={{
                 duration: 6 + (i % 5),
@@ -181,12 +179,12 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
           transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
           whileHover={phase === 0 ? { scale: 1.025, rotateY: 3, rotateX: -2 } : {}}
         >
-          {/* Deep Emerald Envelope Body with Intricate Gold Filigree & Paper Grain */}
+          {/* Jewel-toned velvet envelope body with embossed gold filigree */}
           <div
-            className="absolute inset-0 rounded-2xl overflow-hidden border"
+            className="absolute inset-0 rounded-lg overflow-hidden border"
             style={{
-              background: 'linear-gradient(135deg, #0B3028 0%, #092d26 22%, #071F1A 52%, #0B3028 100%)',
-              borderColor: '#C9A45C',
+              background: 'radial-gradient(ellipse at 50% 0%, rgba(229, 195, 119, 0.16), transparent 48%), linear-gradient(135deg, #124536 0%, #0b3328 24%, #06231c 58%, #104332 100%)',
+              borderColor: '#dfba73',
               boxShadow:
                 phase >= 1
                   ? '0 35px 70px -10px rgba(0, 0, 0, 0.96), 0 14px 28px rgba(6, 29, 24, 0.8), 0 0 32px rgba(201, 164, 92, 0.18)'
@@ -201,24 +199,11 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
               }}
             />
 
-            {/* Islamic Girih Star Lattice Texture */}
-            <GirihLatticePattern />
+            {/* Fine gold arabesque rosette pattern */}
+            <EnvelopeArabesquePattern />
 
-            {/* Intricate Gold Borders & Large Ornate Arabesque Corner Spandrels */}
+            {/* Fine gold border around the folded letter */}
             <IntricateGoldBorder />
-            <OrnateCornerSpandrel position="tl" size={72} className="absolute top-1 left-1 opacity-90" />
-            <OrnateCornerSpandrel position="tr" size={72} className="absolute top-1 right-1 opacity-90" />
-            <OrnateCornerSpandrel position="bl" size={72} className="absolute bottom-1 left-1 opacity-90" />
-            <OrnateCornerSpandrel position="br" size={72} className="absolute bottom-1 right-1 opacity-90" />
-
-            {/* Subtle Damask Watermark Across Envelope Body */}
-            <div
-              className="absolute inset-0 opacity-[0.06] bg-repeat pointer-events-none"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 C35 15, 45 20, 55 20 C45 25, 40 35, 45 45 C35 40, 25 40, 15 45 C20 35, 15 25, 5 20 C15 20, 25 15, 30 5 Z' fill='none' stroke='%23C9A45C' stroke-width='0.8'/%3E%3Ccircle cx='30' cy='30' r='3' fill='%23C9A45C'/%3E%3C/svg%3E")`,
-                backgroundSize: '60px 60px',
-              }}
-            />
 
             {/* Golden light bloom from within when flap opens */}
             <AnimatePresence>
@@ -243,6 +228,7 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
             animate={{
               y: phase >= 4 ? (phase >= 5 ? -175 : -100) : 0,
               scale: phase >= 5 ? 1.08 : 1,
+              opacity: phase >= 4 ? 1 : 0,
             }}
             transition={{
               duration: 1.6,
@@ -442,23 +428,10 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
             />
 
             {/* Intricate Gold Filigree Lace Bordering Along Diagonal Seams */}
-            <EnvelopePocketSeamFiligree className="opacity-90" />
+            <EnvelopePocketSeamFiligree className="opacity-65" />
           </div>
 
-          {/* ★ GRAND CENTER KHATIM MEDALLION (Frames the wax seal in gold filigree) ★ */}
-          <div
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-            style={{ zIndex: 43 }}
-          >
-            <EnvelopeCenterMedallion
-              size={210}
-              className={`transition-all duration-700 ${
-                phase >= 3 ? 'opacity-20 scale-95' : 'opacity-95 scale-100'
-              }`}
-            />
-          </div>
-
-          {/* ★ ROYAL WAX SEAL WITH PRONOUNCED 3D DEPTH & LAYERED SHADOWS ★ */}
+          {/* Central wax seal closes the folded letter envelope */}
           <div
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             style={{ zIndex: 45 }}

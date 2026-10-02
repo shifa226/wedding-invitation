@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'motion/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Countdown } from './components/Countdown';
 import { CoupleSection } from './components/CoupleSection';
 import { Envelope3D } from './components/Envelope3D';
@@ -15,6 +15,15 @@ import { ValimaSection } from './components/ValimaSection';
 
 export default function App() {
   const [isOpened, setIsOpened] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (isOpened) {
+      document.getElementById('home')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }, [isOpened]);
 
   const handleOpenComplete = () => {
     setIsOpened(true);
