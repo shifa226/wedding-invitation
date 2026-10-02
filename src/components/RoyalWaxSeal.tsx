@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'motion/react';
+import React from 'react';
 
 interface RoyalWaxSealProps {
   phase: number;
@@ -366,7 +366,7 @@ export const RoyalWaxSeal: React.FC<RoyalWaxSealProps> = ({
 
           {/* 3. The Royal "I & M" Monogram in Bold Chiseled Relief */}
           <g transform="translate(50, 52.8)">
-            {/* Letter S with bright left bevel and dark right shadow */}
+            {/* Letter I with bright left bevel and dark right shadow */}
             <text
               x="-11.8"
               y="6.8"
@@ -376,7 +376,7 @@ export const RoyalWaxSeal: React.FC<RoyalWaxSealProps> = ({
               fill="url(#chiseledMonogramGold)"
               textAnchor="middle"
             >
-              S
+              I
             </text>
 
             {/* Decorative Ampersand */}

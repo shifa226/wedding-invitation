@@ -1,7 +1,7 @@
-import React from 'react';
 import { motion } from 'motion/react';
-import { ArabesqueCorner, IslamicStarKhatim, MoorishArchHeader } from './IslamicOrnaments';
+import React from 'react';
 import { weddingData } from '../data/weddingData';
+import { ArabesqueCorner, IslamicStarKhatim, MoorishArchHeader } from './IslamicOrnaments';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -165,16 +165,6 @@ export const HeroSection: React.FC = () => {
                 </span>
               </div>
             </div>
-          </div>
-
-          {/* Quick CTA to Video Invitation */}
-          <div className="mt-8 text-center">
-            <a
-              href="#video"
-              className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#cca052] via-[#dfba73] to-[#cca052] text-[#04140f] font-cinzel font-bold text-xs tracking-widest uppercase hover:brightness-110 shadow-[0_4px_20px_rgba(204,160,82,0.35)] transition-all group"
-            >
-              <span>▶ Watch Video Invitation (MP4)</span>
-            </a>
           </div>
         </div>
       </motion.div>

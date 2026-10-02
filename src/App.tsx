@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Envelope3D } from './components/Envelope3D';
-import { Navigation } from './components/Navigation';
-import { HeroSection } from './components/HeroSection';
-import { VideoSection } from './components/VideoSection';
-import { CoupleSection } from './components/CoupleSection';
+import { AnimatePresence, motion } from 'motion/react';
+import { useState } from 'react';
 import { Countdown } from './components/Countdown';
+import { CoupleSection } from './components/CoupleSection';
+import { Envelope3D } from './components/Envelope3D';
 import { FamilySection } from './components/FamilySection';
-import { NikahSection } from './components/NikahSection';
-import { ValimaSection } from './components/ValimaSection';
-import { StorySection } from './components/StorySection';
-import { LocationSection } from './components/LocationSection';
 import { FooterSection } from './components/FooterSection';
+import { HeroSection } from './components/HeroSection';
+import { LocationSection } from './components/LocationSection';
 import { MusicController } from './components/MusicController';
+import { Navigation } from './components/Navigation';
+import { NikahSection } from './components/NikahSection';
+import { StorySection } from './components/StorySection';
+import { ValimaSection } from './components/ValimaSection';
 
 export default function App() {
   const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -57,9 +56,6 @@ export default function App() {
             <main className="relative">
               {/* Main Invitation Reveal Card */}
               <HeroSection />
-
-              {/* Cinematic Video Invitation Section */}
-              <VideoSection />
 
               {/* Couple Section */}
               <CoupleSection />

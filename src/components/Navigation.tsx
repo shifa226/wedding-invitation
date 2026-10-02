@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import React, { useState } from 'react';
 import { weddingData } from '../data/weddingData';
 
 interface NavigationProps {
@@ -11,7 +11,6 @@ export const Navigation: React.FC<NavigationProps> = ({ onReopenEnvelope }) => {
 
   const navLinks = [
     { label: 'Home', href: '#home' },
-    { label: 'Video', href: '#video' },
     { label: 'Couple', href: '#couple' },
     { label: 'Families', href: '#families' },
     { label: 'Nikah', href: '#nikah' },
@@ -46,15 +45,8 @@ export const Navigation: React.FC<NavigationProps> = ({ onReopenEnvelope }) => {
           ))}
         </nav>
 
-        {/* Zone 3: Primary Action & Re-open Envelope */}
+        {/* Zone 3: Re-open Envelope */}
         <div className="flex items-center gap-2.5">
-          <a
-            href="#video"
-            className="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#cca052] to-[#dfba73] text-[#04140f] font-cinzel font-bold text-xs tracking-wider uppercase hover:brightness-110 shadow-md transition-all whitespace-nowrap hidden sm:inline-flex items-center gap-1.5"
-          >
-            <span>▶ Video (MP4)</span>
-          </a>
-
           <button
             onClick={onReopenEnvelope}
             className="px-3 py-1.5 rounded-full border border-[#cca052]/60 text-[#fce8a6] hover:bg-[#cca052]/20 hover:border-[#cca052] font-cinzel text-xs tracking-wider uppercase transition-all whitespace-nowrap cursor-pointer"
