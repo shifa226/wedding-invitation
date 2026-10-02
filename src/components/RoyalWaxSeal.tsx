@@ -53,13 +53,13 @@ export const RoyalWaxSeal: React.FC<RoyalWaxSealProps> = ({
         className="absolute inset-0 rounded-full pointer-events-none transition-all duration-300"
         style={{
           transform: 'translateZ(-22px) translateY(8px) scale(0.96)',
-          background: 'radial-gradient(circle at 48% 46%, rgba(2, 8, 5, 0.98) 0%, rgba(2, 8, 5, 0.8) 60%, transparent 85%)',
+          background: 'radial-gradient(circle at 48% 46%, rgba(6, 29, 24, 0.98) 0%, rgba(6, 29, 24, 0.82) 60%, transparent 85%)',
           boxShadow: `
-            0 3px 6px 2px rgba(0, 0, 0, 0.99),
-            0 12px 24px 4px rgba(0, 0, 0, 0.92),
-            0 24px 48px 8px rgba(0, 0, 0, 0.85),
-            0 42px 80px 14px rgba(0, 0, 0, 0.65),
-            0 0 35px 8px rgba(223, 184, 108, 0.35)
+            0 3px 6px 2px rgba(6, 29, 24, 0.96),
+            0 12px 24px 4px rgba(6, 29, 24, 0.9),
+            0 24px 48px 8px rgba(6, 29, 24, 0.82),
+            0 42px 80px 14px rgba(6, 29, 24, 0.68),
+            0 0 25px 6px rgba(201, 164, 92, 0.22)
           `,
           filter: 'blur(1px)',
         }}
@@ -74,8 +74,8 @@ export const RoyalWaxSeal: React.FC<RoyalWaxSealProps> = ({
         style={{
           transform: 'translateZ(4px) translateY(3.5px)',
           filter: `
-            drop-shadow(0 2px 3px rgba(0,0,0,0.98))
-            drop-shadow(0 8px 12px rgba(0,0,0,0.85))
+            drop-shadow(0 2px 3px rgba(6,29,24,0.98))
+            drop-shadow(0 8px 12px rgba(6,29,24,0.85))
           `,
         }}
       >
@@ -91,8 +91,8 @@ export const RoyalWaxSeal: React.FC<RoyalWaxSealProps> = ({
                C 0.5 62.5, 0 49.5, 3.5 38
                C 7 27, 14.5 17.5, 24.5 11
                C 33.5 5, 42.5 2, 50 2 Z"
-            fill="#1e0206"
-            stroke="#120104"
+            fill="#0B3028"
+            stroke="#061D18"
             strokeWidth="1.8"
           />
         </svg>
@@ -116,7 +116,7 @@ export const RoyalWaxSeal: React.FC<RoyalWaxSealProps> = ({
                C 0.5 62.5, 0 49.5, 3.5 38
                C 7 27, 14.5 17.5, 24.5 11
                C 33.5 5, 42.5 2, 50 2 Z"
-            fill="#3d060e"
+            fill="#0F3A2F"
           />
         </svg>
       </div>
@@ -135,7 +135,7 @@ export const RoyalWaxSeal: React.FC<RoyalWaxSealProps> = ({
             drop-shadow(0 6px 12px rgba(0,0,0,0.85))
             drop-shadow(0 14px 24px rgba(0,0,0,0.7))
             drop-shadow(0 28px 45px rgba(0,0,0,0.5))
-            drop-shadow(0 0 16px rgba(223,184,108,0.32))
+            drop-shadow(0 0 18px rgba(201,164,92,0.2))
           `,
         }}
       >
@@ -146,30 +146,27 @@ export const RoyalWaxSeal: React.FC<RoyalWaxSealProps> = ({
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
-            {/* Rich multi-stop burgundy/crimson liquid wax enamel */}
             <radialGradient id="puddleWaxGloss" cx="35%" cy="28%" r="75%">
-              <stop offset="0%" stopColor="#cf3d53" />
-              <stop offset="18%" stopColor="#aa2337" />
-              <stop offset="42%" stopColor="#811726" />
-              <stop offset="70%" stopColor="#550d18" />
-              <stop offset="88%" stopColor="#33050d" />
-              <stop offset="100%" stopColor="#150103" />
+              <stop offset="0%" stopColor="#F9E9B6" />
+              <stop offset="18%" stopColor="#E5D09A" />
+              <stop offset="42%" stopColor="#C9A45C" />
+              <stop offset="70%" stopColor="#A57A30" />
+              <stop offset="88%" stopColor="#6E4D18" />
+              <stop offset="100%" stopColor="#2E1D0D" />
             </radialGradient>
 
-            {/* Beveled edge light gradient catching light from top-left */}
             <linearGradient id="puddleBevelHighlight" x1="15%" y1="10%" x2="85%" y2="90%">
-              <stop offset="0%" stopColor="#ff9eb0" stopOpacity="0.85" />
-              <stop offset="25%" stopColor="#c52e43" />
-              <stop offset="65%" stopColor="#690f1d" />
-              <stop offset="85%" stopColor="#35060d" />
-              <stop offset="100%" stopColor="#120103" />
+              <stop offset="0%" stopColor="#FFF5DA" stopOpacity="0.9" />
+              <stop offset="25%" stopColor="#E5D09A" />
+              <stop offset="65%" stopColor="#9B7230" />
+              <stop offset="85%" stopColor="#4A3413" />
+              <stop offset="100%" stopColor="#1E1208" />
             </linearGradient>
 
-            {/* Rim golden reflection */}
             <linearGradient id="rimGoldDust" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#dfba73" stopOpacity="0.4" />
+              <stop offset="0%" stopColor="#E5D09A" stopOpacity="0.55" />
               <stop offset="50%" stopColor="transparent" stopOpacity="0" />
-              <stop offset="100%" stopColor="#fce8a6" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#FFF5DA" stopOpacity="0.7" />
             </linearGradient>
           </defs>
 
@@ -222,24 +219,23 @@ export const RoyalWaxSeal: React.FC<RoyalWaxSealProps> = ({
         <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
           <defs>
             <radialGradient id="sunkenDishBase" cx="44%" cy="38%" r="56%">
-              <stop offset="0%" stopColor="#4f0d16" />
-              <stop offset="55%" stopColor="#31060c" />
-              <stop offset="85%" stopColor="#1a0205" />
-              <stop offset="100%" stopColor="#0c0102" />
+              <stop offset="0%" stopColor="#0F3A2F" />
+              <stop offset="55%" stopColor="#0B3028" />
+              <stop offset="85%" stopColor="#061D18" />
+              <stop offset="100%" stopColor="#030E0A" />
             </radialGradient>
 
-            {/* Steep inner shadow cast inside the sunken lip from top-left */}
             <linearGradient id="innerLipShadow" x1="25%" y1="15%" x2="75%" y2="85%">
-              <stop offset="0%" stopColor="rgba(0,0,0,0.95)" />
-              <stop offset="35%" stopColor="rgba(0,0,0,0.4)" />
+              <stop offset="0%" stopColor="rgba(6,29,24,0.95)" />
+              <stop offset="35%" stopColor="rgba(6,29,24,0.42)" />
               <stop offset="70%" stopColor="transparent" />
-              <stop offset="100%" stopColor="rgba(255,230,180,0.22)" />
+              <stop offset="100%" stopColor="rgba(229,208,154,0.18)" />
             </linearGradient>
 
             <radialGradient id="cavityOcclusionDeep" cx="50%" cy="50%" r="50%">
               <stop offset="65%" stopColor="transparent" />
-              <stop offset="85%" stopColor="rgba(0,0,0,0.65)" />
-              <stop offset="100%" stopColor="rgba(0,0,0,0.98)" />
+              <stop offset="85%" stopColor="rgba(6,29,24,0.65)" />
+              <stop offset="100%" stopColor="rgba(6,29,24,0.98)" />
             </radialGradient>
           </defs>
 
@@ -436,19 +432,18 @@ export const RoyalWaxSeal: React.FC<RoyalWaxSealProps> = ({
         <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
           <defs>
             <linearGradient id="waxGlintArcTop" x1="10%" y1="5%" x2="80%" y2="75%">
-              <stop offset="0%" stopColor="rgba(255, 255, 255, 0.72)" />
-              <stop offset="25%" stopColor="rgba(255, 255, 255, 0.25)" />
-              <stop offset="55%" stopColor="rgba(255, 255, 255, 0)" />
+              <stop offset="0%" stopColor="rgba(255,255,255,0.72)" />
+              <stop offset="25%" stopColor="rgba(255,255,255,0.22)" />
+              <stop offset="55%" stopColor="rgba(255,255,255,0)" />
             </linearGradient>
 
             <radialGradient id="glintDot" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#ffffff" stopOpacity="0.85" />
-              <stop offset="40%" stopColor="#fce8a6" stopOpacity="0.5" />
+              <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.82" />
+              <stop offset="40%" stopColor="#E5D09A" stopOpacity="0.45" />
               <stop offset="100%" stopColor="transparent" stopOpacity="0" />
             </radialGradient>
           </defs>
 
-          {/* Curvature reflection on top-left wax shoulder */}
           <path
             d="M 19 19
                C 29 9, 46 6.5, 59 8
@@ -458,10 +453,17 @@ export const RoyalWaxSeal: React.FC<RoyalWaxSealProps> = ({
             fill="url(#waxGlintArcTop)"
           />
 
-          {/* Micro pinpoint glint on stamp rim */}
           <circle cx="28" cy="24" r="3" fill="url(#glintDot)" />
         </svg>
       </div>
+
+      <div
+        className="absolute inset-[11%] rounded-full pointer-events-none"
+        style={{
+          background: 'linear-gradient(120deg, rgba(255,255,255,0.18) 0%, rgba(229,208,154,0.38) 18%, rgba(255,255,255,0.12) 32%, rgba(255,255,255,0) 42%)',
+          boxShadow: 'inset 0 0 12px rgba(255,255,255,0.08)',
+        }}
+      />
 
       {/* ========================================================
           LAYER 7: FRACTURE CRACKS ON UNSEALING (Phase 2)

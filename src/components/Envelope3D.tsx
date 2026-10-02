@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 import confetti from 'canvas-confetti';
-import { IslamicStarKhatim, ArabesqueCorner, EnvelopeFlapFiligree, IntricateGoldBorder } from './IslamicOrnaments';
-import {
-  EnvelopeCenterMedallion,
-  OrnateCornerSpandrel,
-  GirihLatticePattern,
-  EnvelopePocketSeamFiligree,
-} from './EnvelopeCoverFiligree';
-import { RoyalWaxSeal } from './RoyalWaxSeal';
+import { Music, Sparkles } from 'lucide-react';
+import { AnimatePresence, motion } from 'motion/react';
+import React, { useState } from 'react';
 import { weddingData } from '../data/weddingData';
 import { arabicAudio } from '../utils/audioController';
-import { Calendar, Clock, MapPin, Sparkles, Music } from 'lucide-react';
+import {
+  EnvelopeCenterMedallion,
+  EnvelopePocketSeamFiligree,
+  GirihLatticePattern,
+  OrnateCornerSpandrel,
+} from './EnvelopeCoverFiligree';
+import { ArabesqueCorner, EnvelopeFlapFiligree, IntricateGoldBorder, IslamicStarKhatim } from './IslamicOrnaments';
+import { RoyalWaxSeal } from './RoyalWaxSeal';
 
 interface Envelope3DProps {
   isOpen: boolean;
@@ -98,11 +98,11 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
       {/* Cinematic Dark Arabian Ambience with Golden Dust & Subtle Stars */}
       <div
         className={`absolute inset-0 transition-colors duration-1000 ${
-          phase >= 1 ? 'bg-[#020906]' : 'bg-[#04120c]'
+          phase >= 1 ? 'bg-[#10070b]' : 'bg-[#250d16]'
         }`}
       >
         {/* Soft radial glow centered on envelope */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(197,160,89,0.16)_0%,rgba(6,28,21,0.85)_50%,#010604_100%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(197,160,89,0.16)_0%,rgba(62,20,34,0.85)_50%,#10070b_100%)] pointer-events-none" />
 
         {/* Delicate Islamic geometric lattice overlay */}
         <div
@@ -183,14 +183,24 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
         >
           {/* Deep Emerald Envelope Body with Intricate Gold Filigree & Paper Grain */}
           <div
-            className="absolute inset-0 rounded-2xl overflow-hidden envelope-texture border border-[#cca052]/50"
+            className="absolute inset-0 rounded-2xl overflow-hidden border"
             style={{
+              background: 'linear-gradient(135deg, #0B3028 0%, #092d26 22%, #071F1A 52%, #0B3028 100%)',
+              borderColor: '#C9A45C',
               boxShadow:
                 phase >= 1
-                  ? '0 35px 70px -10px rgba(0, 0, 0, 0.95), 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 50px rgba(197, 160, 89, 0.35)'
-                  : '0 20px 45px -8px rgba(0, 0, 0, 0.85), 0 8px 18px rgba(0, 0, 0, 0.7), 0 0 25px rgba(197, 160, 89, 0.15)',
+                  ? '0 35px 70px -10px rgba(0, 0, 0, 0.96), 0 14px 28px rgba(6, 29, 24, 0.8), 0 0 32px rgba(201, 164, 92, 0.18)'
+                  : '0 20px 45px -8px rgba(0, 0, 0, 0.9), 0 10px 18px rgba(6, 29, 24, 0.7), 0 0 20px rgba(201, 164, 92, 0.12)',
             }}
           >
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  'radial-gradient(circle at 20% 18%, rgba(229, 208, 154, 0.18), transparent 28%), radial-gradient(circle at 80% 15%, rgba(255,255,255,0.06), transparent 20%), linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.08))',
+              }}
+            />
+
             {/* Islamic Girih Star Lattice Texture */}
             <GirihLatticePattern />
 
@@ -205,7 +215,7 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
             <div
               className="absolute inset-0 opacity-[0.06] bg-repeat pointer-events-none"
               style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 C35 15, 45 20, 55 20 C45 25, 40 35, 45 45 C35 40, 25 40, 15 45 C20 35, 15 25, 5 20 C15 20, 25 15, 30 5 Z' fill='none' stroke='%23cca052' stroke-width='0.8'/%3E%3Ccircle cx='30' cy='30' r='3' fill='%23cca052'/%3E%3C/svg%3E")`,
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 C35 15, 45 20, 55 20 C45 25, 40 35, 45 45 C35 40, 25 40, 15 45 C20 35, 15 25, 5 20 C15 20, 25 15, 30 5 Z' fill='none' stroke='%23C9A45C' stroke-width='0.8'/%3E%3Ccircle cx='30' cy='30' r='3' fill='%23C9A45C'/%3E%3C/svg%3E")`,
                 backgroundSize: '60px 60px',
               }}
             />
@@ -469,14 +479,14 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        <p className="font-cormorant italic text-base sm:text-lg text-[#cca052]/90 tracking-wide">
+        <p className="font-cormorant italic text-base sm:text-lg text-[#e4d0a0] tracking-wide">
           Together with their families
         </p>
 
         {/* TAP TO OPEN & PLAY SONG with gentle glowing animated indicator */}
         <motion.button
           onClick={triggerOpen}
-          className="mt-4 px-8 py-3.5 rounded-full border border-[#cca052]/80 bg-[#09261c]/95 backdrop-blur-md text-[#fce8a6] font-cinzel text-xs sm:text-sm tracking-[0.2em] uppercase hover:border-[#fce8a6] hover:bg-[#0c3325] transition-all flex items-center gap-3 mx-auto shadow-[0_0_30px_rgba(197,160,89,0.3)] cursor-pointer"
+          className="mt-4 px-8 py-3.5 rounded-full border border-[#c9a45c]/80 bg-[#09261c]/95 backdrop-blur-md text-[#f7f0df] font-cinzel text-[10px] sm:text-xs tracking-[0.22em] uppercase hover:border-[#e4d0a0] hover:bg-[#0c3325] transition-all flex items-center gap-3 mx-auto shadow-[0_0_30px_rgba(201,164,92,0.22)] cursor-pointer"
           animate={{
             boxShadow: [
               '0 0 12px rgba(197,160,89,0.25)',
@@ -487,8 +497,8 @@ export const Envelope3D: React.FC<Envelope3DProps> = ({
           transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
         >
           <Music className="w-4 h-4 text-[#cca052] animate-bounce" />
-          <span>TAP TO OPEN &amp; PLAY SONG</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#cca052] animate-ping" />
+          <span>Tap the envelope to open</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-[#e4d0a0] animate-ping" />
         </motion.button>
 
         {/* Discreet skip affordance if visitor wants instant entry */}
